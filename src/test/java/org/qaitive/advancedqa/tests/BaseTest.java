@@ -16,6 +16,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemResource("driver/linux/chromedriver").getPath());
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
+        options.setBinary("/usr/bin/google-chrome");
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1280, 1024));
         driver.navigate().to(ETSY_COM);
