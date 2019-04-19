@@ -13,7 +13,7 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemResource("driver/chromedriver.exe").getPath());
+        System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemResource("driver/linux/chromedriver").getPath());
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         driver = new ChromeDriver(options);
