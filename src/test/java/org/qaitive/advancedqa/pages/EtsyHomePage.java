@@ -16,10 +16,10 @@ public class EtsyHomePage extends PageFactory implements PageObject {
     @FindBy(id = "desktop-category-nav")
     private WebElement etsyMenu;
 
-    @FindBy(id = "search-query")
+    @FindBy(id = "global-enhancements-search-query")
     private WebElement etsySearchQuery;
 
-    @FindBy(css = ".search-button-wrapper .btn.btn-primary")
+    @FindBy(css = "[value='Search']")
     private WebElement etsySearchButton;
 
     public EtsyHomePage(WebDriver driver) {
