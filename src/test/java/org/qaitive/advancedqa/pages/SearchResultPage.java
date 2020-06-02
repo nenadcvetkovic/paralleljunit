@@ -26,7 +26,7 @@ public class SearchResultPage extends PageFactory implements PageObject {
     }
 
     public List<WebElement> getSearchResults() {
-        return listSearchResults;
+        return  new WebDriverWait(driver, 10, 400).until(ExpectedConditions.visibilityOfAllElements(listSearchResults));
     }
 
     public SearchResultPage chooseCategory(String category) {
