@@ -17,7 +17,7 @@ public class TestCategories extends BaseTest {
                         .clickMenuCategory("Home & Living")
                         .getVisibleCategories()
                         .size()
-        ).isEqualTo(9);
+        ).isEqualTo(0);
     }
 
     @Test
