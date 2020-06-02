@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -28,12 +30,9 @@ public class SearchResultPage extends PageFactory implements PageObject {
     }
 
     public SearchResultPage chooseCategory(String category) {
-        driver.findElement(By.xpath("//*[@id='search-filter-reset-form']//div[2]//li[contains(. , '" + category + "')]/a")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        WebDriverWait wait = new WebDriverWait(driver, 5, 100);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='search-filter-reset-form']//li[contains(. , '" + category + "')]/a"))).click();
+
         return new SearchResultPage(this.driver);
     }
 

@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
     private static final String BROWSER = System.getProperty("browser", "chrome");
@@ -38,6 +39,7 @@ public class DriverManager {
         options.addArguments("--disable-gpu");
 //        options.setBinary("/usr/bin/google-chrome");
         WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(1280, 1024));
 
 

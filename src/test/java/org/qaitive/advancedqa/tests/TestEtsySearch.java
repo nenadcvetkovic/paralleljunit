@@ -14,7 +14,7 @@ public class TestEtsySearch extends BaseTest {
         Assertions.assertThat(new EtsyHomePage(driver)
                 .search("dirk nowitzki")
                 .getSearchResults().size())
-                .isEqualTo(64);
+                .isEqualTo(60);
     }
 
     @Test
