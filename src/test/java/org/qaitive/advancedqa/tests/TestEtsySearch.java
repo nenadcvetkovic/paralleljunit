@@ -23,7 +23,7 @@ public class TestEtsySearch extends BaseTest {
                 .search("dirk nowitzki")
                 .chooseCategory("Home & Living")
                 .getSearchResults().size())
-                .isEqualTo(24);
+                .isEqualTo(20);
 
     }
 }
