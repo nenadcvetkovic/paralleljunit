@@ -30,7 +30,7 @@ public class SearchResultPage extends PageFactory implements PageObject {
     }
 
     public SearchResultPage chooseCategory(String category) {
-        WebDriverWait wait = new WebDriverWait(driver, 5, 100);
+        WebDriverWait wait = new WebDriverWait(driver, 10, 400);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='search-filter-reset-form']//li[contains(. , '" + category + "')]/a"))).click();
 
         return new SearchResultPage(this.driver);

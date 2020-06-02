@@ -39,7 +39,7 @@ public class DriverManager {
         options.addArguments("--disable-gpu");
 //        options.setBinary("/usr/bin/google-chrome");
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(1280, 1024));
 
 
